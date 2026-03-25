@@ -1,0 +1,151 @@
+.services{
+  width:100%;
+  padding:100px 2%;
+  background:linear-gradient(135deg,#f7fbff,#eef4ff);
+  text-align:center;
+  font-family:"Roboto", sans-serif;
+}
+
+/* HEADER */
+
+.service-header{
+  max-width:700px;
+  margin:auto;
+  margin-bottom:70px;
+}
+
+.service-tag{
+  color:#156aa1;
+  letter-spacing:3px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.service-header h2{
+  font-size:2.6rem;
+  margin:15px 0;
+  color:#1d2168;
+  font-weight:800;
+}
+
+.service-header p{
+  color:#555;
+  line-height:1.7;
+  font-size:15px;
+}
+
+/* GRID */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:35px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* CARD */
+
+.service-card{
+  width: 20rem;
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  transition:all .4s ease;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  position:relative;
+}
+
+/* Premium top border animation */
+
+.service-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(90deg,#156aa1,#1d2168);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .4s ease;
+}
+
+.service-card:hover::before{
+  transform:scaleX(1);
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+.service-img{
+  width:100%;
+  height:220px; /* fixed height for all cards */
+  overflow:hidden;
+  border-radius:16px;
+  background:#f4f7fb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.service-img img{
+  width:100%;
+  height:100%;
+  object-fit:contain;  /* ✅ NO ZOOM */
+  padding:10px;        /* space around image */
+  transition: transform 0.4s ease;
+}
+.service-card:hover img{
+  transform:scale(1.08);
+}
+
+/* subtle overlay for premium feel */
+
+.service-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top, rgba(0,0,0,0.25), transparent);
+  opacity:.6;
+}
+
+/* CONTENT */
+
+.service-content{
+  padding:26px;
+}
+
+.service-content h3{
+  font-size:20px;
+  margin-bottom:10px;
+  color:#1d2168;
+  font-weight:700;
+}
+
+.service-content p{
+  font-size:14px;
+  color:#555;
+  line-height:1.6;
+}
+
+/* TABLET */
+
+@media(max-width:992px){
+  .services-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .services{
+    padding:80px 5%;
+  }
+}

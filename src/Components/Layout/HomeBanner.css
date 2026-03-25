@@ -1,0 +1,113 @@
+
+*{
+  box-sizing: border-box;
+}
+.HomeBanner-container {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../../Assets/Solar.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Dark gradient overlay */
+.HomeBannerShadow {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(4, 28, 90, 0.75)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Glass Content Box */
+.HomeBannerShadow > * {
+  z-index: 2;
+}
+
+.HomeBannerShadow {
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+/* Small Heading */
+.BannerSmallHead {
+  font-size: 2rem;
+  /* letter-spacing: 2px; */
+  font-family: italic;
+  text-transform: uppercase;
+  color:white;
+  margin-bottom: 15px;
+}
+
+/* Main Heading */
+.bannerMainHead {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Gradient Text Effect */
+.bannerMainHead span {
+  background: linear-gradient(90deg, #00e0ff, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph */
+.bannerMainPara {
+  width: 55%;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 35px;
+}
+
+/* Modern Button */
+.HomeBannerShadow button {
+  padding: 14px 35px;
+  background: linear-gradient(90deg, #050a44, #1f5584);
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.HomeBannerShadow button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #1f5584;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .bannerMainHead {
+    font-size: 3rem;
+  }
+
+  .bannerMainPara {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .bannerMainHead {
+    font-size: 2.2rem;
+  }
+
+  .bannerMainPara {
+    width: 95%;
+    font-size: 1rem;
+  }
+}

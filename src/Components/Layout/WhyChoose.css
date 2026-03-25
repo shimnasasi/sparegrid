@@ -1,0 +1,70 @@
+/* ===== SECTION ===== */
+.whychoose-section{
+  position:relative;
+  padding:80px 6%;
+  background:url("../../Assets/whychoose1.jpg") center/cover no-repeat;
+}
+
+/* DARK OVERLAY */
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+}
+
+/* CONTAINER */
+.why-container{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+  z-index:2;
+}
+
+/* IMAGE CARD */
+.why-image img{
+  width:420px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+  transition:.4s;
+}
+
+.why-image img:hover{
+  transform:scale(1.05);
+}
+
+/* CONTENT */
+.why-content{
+  color:white;
+  max-width:500px;
+}
+
+.why-content h2{
+  color:#7ed957;
+  margin-bottom:25px;
+  font-size:2rem;
+}
+
+/* LIST */
+.why-content ul{
+  list-style:none;
+  padding:0;
+}
+
+.why-content li{
+  margin-bottom:15px;
+  position:relative;
+  padding-left:25px;
+  line-height:1.6;
+}
+
+/* BULLET ICON */
+.why-content li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#7ed957;
+  font-weight:bold;
+}
